@@ -6,12 +6,17 @@ var primaParola = prompt("Inserisci la prima parola");
 var secondaParola = prompt("Inserisci seconda parola");
 
 // CONFRONTO
-
-if (primaParola.length > secondaParola.length) {
-  console.log(secondaParola + " " + primaParola);
-  document.getElementById("risultato").innerHTML = secondaParola + " " + primaParola;
-} else if (primaParola.length < secondaParola.length) {
-  document.getElementById("risultato").innerHTML = primaParola + " " + secondaParola;
+if (primaParola == "" || secondaParola == ""){
+  alert("Inserisci le parole");
+  primaParola = prompt("Inserisci la prima parola");
+  secondaParola = prompt("Inserisci seconda parola");
 } else {
-  document.getElementById("risultato").innerHTML = primaParola + " e " + secondaParola + " sono lunghe uguali.";
+  if (primaParola.length > secondaParola.length) {
+    console.log(secondaParola + " " + primaParola);
+    document.getElementById("risultato").innerHTML = secondaParola + " " + primaParola;
+  } else if (primaParola.length < secondaParola.length) {
+    document.getElementById("risultato").innerHTML = primaParola + " " + secondaParola;
+  } else {
+    document.getElementById("risultato").innerHTML = primaParola + " e " + secondaParola + " sono lunghe uguali.";
+  }
 }
