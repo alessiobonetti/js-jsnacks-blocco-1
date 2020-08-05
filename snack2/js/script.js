@@ -7,10 +7,10 @@ var secondaParola = prompt("Inserisci seconda parola");
 
 // CONFRONTO
 
-if (primaParola.lenght > secondaParola.lenght) {
-  console.log(secondaParola + " " + primaParola)
+if (primaParola.length > secondaParola.length) {
+  console.log(secondaParola + " " + primaParola);
   document.getElementById("risultato").innerHTML = secondaParola + " " + primaParola;
-} else if (primaParola.lenght < secondaParola.lenght) {
+} else if (primaParola.length < secondaParola.length) {
   document.getElementById("risultato").innerHTML = primaParola + " " + secondaParola;
 } else {
   document.getElementById("risultato").innerHTML = primaParola + " e " + secondaParola + " sono lunghe uguali.";
